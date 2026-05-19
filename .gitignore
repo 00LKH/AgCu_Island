@@ -1,0 +1,27 @@
+# --- Secrets ---
+.env
+.env.local
+.env.*.local
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# --- PBS / cluster job outputs ---
+*.o[0-9]*
+*.e[0-9]*
+.stop_cleanup.log
+
+# --- GCGA control sentinels ---
+DONE
+STOP
+STOP_CHAIN
+
+# --- Large GCGA computation outputs ---
+03_gcga/process/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
