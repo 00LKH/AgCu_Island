@@ -26,7 +26,7 @@ fi
 
 # --- 다음 job을 먼저 큐에 넣어둠 (afterany: 성공/실패/walltime/OOM kill 모두 포함) ---
 # 미리 큐잉해야 현재 job이 hard crash 되어도 후속 job이 살아남음
-NEXT_JID=$(qsub -W depend=afterany:$PBS_JOBID batch_safe.sh)
+NEXT_JID=$(qsub -W depend=afterany:$PBS_JOBID batch_lterative.sh)
 QSUB_RC=$?
 if [ $QSUB_RC -eq 0 ]; then
     echo "[$(date)] 다음 job 예약됨: $NEXT_JID (afterany:$PBS_JOBID)"
