@@ -25,4 +25,7 @@ STOP_CHAIN
 # --- OS ---
 .DS_Store
 Thumbs.db
+
+# --- Directory ---
 OLD/
+.vscode/
